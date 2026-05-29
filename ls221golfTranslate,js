@@ -17,5 +17,4 @@ function golfScore(par, strokes){
     return("Go Home!")
 }
 
-
 console.log(golfScore(3, 4));
