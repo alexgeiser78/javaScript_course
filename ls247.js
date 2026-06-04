@@ -76,15 +76,24 @@ function validateManifest(manifest) {
   return errors;
 }
 
-console.log(
-  validateManifest({
-    containerId: 1,
-    destination: "Santa Cruz",
-    weight: 304,
-    unit: "kg",
-    hazmat: false
-  })
-);
+function processManifest(manifest) {
+  const errors = validateManifest(manifest);
+
+  if (Object.keys(errors).length === 0) {
+    const normalized = normalizeUnits(manifest);
+
+    console.log(`Validation success: ${manifest.containerId}`);
+    console.log(`Total weight: ${normalized.weight} kg`);
+  }
+}
 
 console.log(validateManifest({}));
 console.log(validateManifest({ weight: NaN }));
+
+processManifest({
+  containerId: 55,
+  destination: "Carmel",
+  weight: 400,
+  unit: "lb",
+  hazmat: false
+});
