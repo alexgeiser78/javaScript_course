@@ -84,6 +84,9 @@ function processManifest(manifest) {
 
     console.log(`Validation success: ${manifest.containerId}`);
     console.log(`Total weight: ${normalized.weight} kg`);
+  } else {
+    console.log(`Validation error: ${manifest.containerId}`);
+    console.log(errors);
   }
 }
 
