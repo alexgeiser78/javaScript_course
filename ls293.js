@@ -9,5 +9,11 @@ const firstAstronaut = {
 };
 
 function addCrewMember(crew, astronaut) {
+  for (let i = 0; i < crew.length; i++) {
+    if (crew[i].id === astronaut.id) {
+      console.log("Duplicate ID: " + astronaut.id);
+      return;
+    }
+  }
 
 }
