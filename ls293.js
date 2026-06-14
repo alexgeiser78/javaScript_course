@@ -16,7 +16,6 @@ function addCrewMember(crew, astronaut) {
     }
   }
   crew.push(astronaut);
-  console.log(`Added ${astronaut.name} as ${astronaut.role}`);
 }
 
 addCrewMember(squad, firstAstronaut);
@@ -31,8 +30,9 @@ const remainingCrew = [
   { id: 8, name: "Hank", role: "Mechanic", isEVAEligible: true, priority: 2 },
   { id: 9, name: "Irene", role: "Specialist", isEVAEligible: true, priority: 5 },
   { id: 10, name: "Joan", role: "Technician", isEVAEligible: false, priority: 1 },
-]; 
+];
 
 for (let i = 0; i < remainingCrew.length; i++) {
   addCrewMember(squad, remainingCrew[i]);
 }
+
