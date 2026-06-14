@@ -36,3 +36,4 @@ for (let i = 0; i < remainingCrew.length; i++) {
   addCrewMember(squad, remainingCrew[i]);
 }
 
+function swapCrewMembers(crew, fromIndex, toIndex){}
