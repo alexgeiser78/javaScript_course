@@ -19,3 +19,4 @@ function addCrewMember(crew, astronaut) {
   console.log(`Added ${astronaut.name} as ${astronaut.role}`);
 }
 
+addCrewMember(squad, firstAstronaut);
