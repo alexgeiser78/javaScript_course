@@ -15,5 +15,7 @@ function addCrewMember(crew, astronaut) {
       return;
     }
   }
-
+  crew.push(astronaut);
+  console.log(`Added ${astronaut.name} as ${astronaut.role}`);
 }
+
