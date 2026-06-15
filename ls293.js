@@ -46,6 +46,8 @@ function swapCrewMembers(crew, fromIndex, toIndex) {
     console.log("Invalid crew indices");
     return;
   }
-  
-const updatedCrew = crew.slice();
+
+  const updatedCrew = crew.slice();
+updatedCrew[fromIndex] =
+  updatedCrew.splice(toIndex, 1, updatedCrew[fromIndex])[0];
 }
