@@ -94,4 +94,6 @@ function chunkCrew(crew, size) {
 
 const EVAChunks = chunkCrew(EVAReadySquad, 3);
 
-function printCrewSummary(crew){}
+function printCrewSummary(crew) {
+const sorted = crew.slice();
+}
