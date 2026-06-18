@@ -78,7 +78,3 @@ function getEVAReadyCrew(crew) {
 }
 
 const EVAReadySquad = getEVAReadyCrew(updatedSquad);
-
-for (let i = 0; i < EVAReadySquad.length; i++) {
-  console.log(EVAReadySquad[i].name);
-}
