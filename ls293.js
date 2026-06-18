@@ -48,6 +48,11 @@ function swapCrewMembers(crew, fromIndex, toIndex) {
   }
 
   const updatedCrew = crew.slice();
-updatedCrew[fromIndex] =
-  updatedCrew.splice(toIndex, 1, updatedCrew[fromIndex])[0];
+  updatedCrew[fromIndex] = updatedCrew.splice(toIndex, 1, updatedCrew[fromIndex])[0];
+
+for (let i = 0; i < updatedCrew.length; i++) {
+    console.log(updatedCrew[i].name);
+  }
+
+  return updatedCrew;
 }
