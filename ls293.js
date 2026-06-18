@@ -94,10 +94,4 @@ function chunkCrew(crew, size) {
 
 const EVAChunks = chunkCrew(EVAReadySquad, 3);
 
-for (let i = 0; i <  EVAChunks.length; i++) {
-  console.log(`Chunk ${i+1}:`); 
-  for (let j = 0; j < EVAChunks[i].length; j++) {
-    console.log(EVAChunks[i][j].name);
-    
-  }
-}
+function printCrewSummary(crew){}
