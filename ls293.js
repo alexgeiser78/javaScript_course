@@ -96,5 +96,10 @@ const EVAChunks = chunkCrew(EVAReadySquad, 3);
 
 function printCrewSummary(crew) {
   const sorted = crew.slice();
-sortByPriorityDescending(sorted)
+  sortByPriorityDescending(sorted); 
+  for (const astronaut of sorted) {
+    console.log(astronaut.name);
+  }
 }
+
+printCrewSummary(updatedSquad);
