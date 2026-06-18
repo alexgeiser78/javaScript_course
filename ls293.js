@@ -72,7 +72,13 @@ function getEVAReadyCrew(crew) {
   for (const astronaut of crew) {
     if (astronaut.isEVAEligible) eligible.push(astronaut);
   }
-sortByPriorityDescending(eligible);
-
+  sortByPriorityDescending(eligible); 
+  
   return eligible;
+}
+
+const EVAReadySquad = getEVAReadyCrew(updatedSquad);
+
+for (let i = 0; i < EVAReadySquad.length; i++) {
+  console.log(EVAReadySquad[i].name);
 }
