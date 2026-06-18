@@ -55,14 +55,27 @@ function swapCrewMembers(crew, fromIndex, toIndex) {
 
 const updatedSquad = swapCrewMembers(squad, 2, 5);
 
-function getEVAReadyCrew(crew) {
-  const eligible = [];
-
-  for (let i = 0; i < crew.length; i++) {
-    if (crew[i].isEVAEligible) {
-      eligible.push(crew[i]);
+function sortByPriorityDescending(crew){
+  // Outer loop: controls how many passes we make
+for (let i = 0; i < crew.length - 1; i++) {
+  // Inner loop: compares neighboring items
+  for (let j = 0; j < crew.length - 1 - i; j++) {
+    // If current member has lower priority than next, swap
+    if (crew[j].priority < crew[j + 1].priority) {
+      // Using a temp variable for the swap
+        const temp = crew[j];
+        crew[j] = crew[j + 1];
+        crew[j + 1] = temp;
     }
   }
+}
+}
 
+function getEVAReadyCrew(crew) {
+  const eligible = [];
+  for (const astronaut of crew) {
+    if (astronaut.isEVAEligible) eligible.push(astronaut);
+  }
+  
   return eligible;
 }
