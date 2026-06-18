@@ -73,8 +73,9 @@ function getEVAReadyCrew(crew) {
     if (astronaut.isEVAEligible) eligible.push(astronaut);
   }
   sortByPriorityDescending(eligible); 
-  
   return eligible;
 }
 
 const EVAReadySquad = getEVAReadyCrew(updatedSquad);
+
+function chunkCrew(crew, size){}
