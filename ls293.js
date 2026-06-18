@@ -78,7 +78,6 @@ function getEVAReadyCrew(crew) {
 }
 
 const EVAReadySquad = getEVAReadyCrew(updatedSquad);
-
 function chunkCrew(crew, size) {
   if (size < 1) {
     console.log("Chunk size must be >= 1");
@@ -94,3 +93,11 @@ function chunkCrew(crew, size) {
 }
 
 const EVAChunks = chunkCrew(EVAReadySquad, 3);
+
+for (let i = 0; i <  EVAChunks.length; i++) {
+  console.log(`Chunk ${i+1}:`); 
+  for (let j = 0; j < EVAChunks[i].length; j++) {
+    console.log(EVAChunks[i][j].name);
+    
+  }
+}
