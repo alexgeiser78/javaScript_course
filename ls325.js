@@ -22,3 +22,7 @@ const rawCatalogCards = [
 ];
 
 function parseCard(rawString) {}
+
+const cardResult = parseCard(rawCatalogCards[2]);
+
+console.log(cardResult);
