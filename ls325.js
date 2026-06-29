@@ -23,11 +23,11 @@ const rawCatalogCards = [
 
 function parseCard(rawString) {
   const parts = rawString.split("|");
-const trimmedParts = [];
-for (let i = 0; i < parts.length; i++) {
-  // code to run on each iteration
-}
-  return parts;
+  const trimmedParts = [];
+  for (let i = 0; i < parts.length; i++) {
+trimmedParts.push(parts[i].trim());
+  }
+  return trimmedParts;
 }
 
 const cardResult = parseCard(rawCatalogCards[2]);
