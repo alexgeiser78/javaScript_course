@@ -27,14 +27,17 @@ function parseCard(rawString) {
   for (let i = 0; i < parts.length; i++) {
     trimmedParts.push(parts[i].trim());
   }
-const title = trimmedParts[0];
-const author = trimmedParts[1];
-const year = trimmedParts[2];
-const location = trimmedParts[3];
-
-return { title, author, year, location };
+  const title = trimmedParts[0];
+  const author = trimmedParts[1];
+  const year = trimmedParts[2];
+  const location = trimmedParts[3];
+  return {
+    title: title || "Unknown",
+    author: author || "Unknown",
+    year: year,
+    location: location || "Unknown"
+  };
 }
 
 const cardResult = parseCard(rawCatalogCards[2]);
 console.log(cardResult);
-
