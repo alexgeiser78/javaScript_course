@@ -34,7 +34,8 @@ function parseCard(rawString) {
   return {
     title: title || "Unknown",
     author: author || "Unknown",
-    year: year,
+    year: year ? parseInt(year) : "Unknown"
+,
     location: location || "Unknown"
   };
 }
