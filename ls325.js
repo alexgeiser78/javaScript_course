@@ -34,11 +34,16 @@ function parseCard(rawString) {
   return {
     title: title || "Unknown",
     author: author || "Unknown",
-    year: year ? parseInt(year) : "Unknown"
-,
+    year: year ? parseInt(year) : "Unknown",
     location: location || "Unknown"
   };
 }
 
-const cardResult = parseCard(rawCatalogCards[2]);
-console.log(cardResult);
+function parseCatalog(rawCards) {
+  const catalog = [];
+  return catalog;
+}
+
+const catalog = parseCatalog(rawCatalogCards);
+
+console.log(catalog.length);
