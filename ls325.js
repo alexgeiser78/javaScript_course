@@ -44,6 +44,7 @@ function parseCatalog(rawCards) {
   return catalog;
 }
 
+
 const catalog = parseCatalog(rawCatalogCards);
 
 console.log(catalog.length);
