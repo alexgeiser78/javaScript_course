@@ -41,11 +41,18 @@ function parseCard(rawString) {
 
 function parseCatalog(rawCards) {
   const catalog = [];
- for (let i = 0; i < rawCards.length; i++) {
+  for (let i = 0; i < rawCards.length; i++) {
     catalog.push(parseCard(rawCards[i]));
   }
   return catalog;
 }
 
 const catalog = parseCatalog(rawCatalogCards);
-console.log(catalog.length);
+
+function findByAuthor(catalog, author) {
+  const searchTerm = author.toLowerCase();
+  const results = [];
+for (let i = 0; i < catalog.length; i++) {
+
+}
+}
