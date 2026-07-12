@@ -63,6 +63,13 @@ function findByAuthor(catalog, author) {
 function groupByDecade(catalog) {
   const grouped = {};
   for (let i = 0; i < catalog.length; i++) {
-    const book = catalog[i]
+    const book = catalog[i];
+  if (book.year === "Unknown") {
+  if (!grouped["Unknown"]) {
+    grouped["Unknown"] = [];
+  }
+  grouped["Unknown"].push(book);
+  continue;
 }
+  }
 }
