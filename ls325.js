@@ -78,8 +78,10 @@ function groupByDecade(catalog) {
     }
     grouped[decadeKey].push(book);
   }
-return (grouped);
+  return grouped;
 }
 
 const byDecade = groupByDecade(catalog);
-console.log(byDecade);
+
+function renderEntry(entry) {}
+console.log(renderEntry(catalog[0]));
