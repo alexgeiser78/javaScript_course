@@ -105,5 +105,17 @@ function validateEntry(entry) {
     isValid = false;
   }
 
+  if (!entry.author || entry.author === "Unknown") {
+    isValid = false;
+  }
+
+  if (!entry.year || entry.year === "Unknown") {
+    isValid = false;
+  }
+
+  if (!entry.location || entry.location === "Unknown") {
+    isValid = false;
+  }
+
   return isValid;
 }
