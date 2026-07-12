@@ -64,12 +64,19 @@ function groupByDecade(catalog) {
   const grouped = {};
   for (let i = 0; i < catalog.length; i++) {
     const book = catalog[i];
-  if (book.year === "Unknown") {
-  if (!grouped["Unknown"]) {
-    grouped["Unknown"] = [];
-  }
-  grouped["Unknown"].push(book);
-  continue;
+    if (book.year === "Unknown") {
+      if (!grouped["Unknown"]) {
+        grouped["Unknown"] = [];
+      }
+      grouped["Unknown"].push(book);
+      continue;
+    }
+  const decade = Math.floor(book.year / 10) * 10;
+  const decadeKey = `${decade}s`;
+ 
+ if (!grouped[decadeKey]) {
+  grouped[decadeKey] = [];
 }
-  }
+
+grouped[decadeKey].push(book); }
 }
