@@ -119,4 +119,7 @@ function exportToJSON(catalog) {
   return JSON.stringify(catalog, null, 2);
 }
 
-console.log(exportToJSON(catalog.slice(0, 2)));
+function exportToCSV(catalog){
+  const header = "Title,Author,Year,Location";
+  const rows = [];
+}
