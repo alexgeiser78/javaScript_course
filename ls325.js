@@ -122,9 +122,16 @@ function exportToJSON(catalog) {
 function exportToCSV(catalog) {
   const header = "Title,Author,Year,Location";
   const rows = [];
-for (let i = 0; i < catalog.length; i++) {
-  const entry = catalog[i];
-  const row = `"${entry.title}","${entry.author}",${entry.year},"${entry.location}"`;
-  rows.push(row);
+  for (let i = 0; i < catalog.length; i++) {
+    const entry = catalog[i];
+    rows.push(`"${entry.title}","${entry.author}",${entry.year},"${entry.location}"`);
+  }
+let csv = header;
+for (let i = 0; i < rows.length; i++) {
+  csv = csv + "\n" + rows[i];
 }
+
+return csv;
 }
+
+console.log(exportToCSV(catalog));
