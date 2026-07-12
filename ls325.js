@@ -71,12 +71,15 @@ function groupByDecade(catalog) {
       grouped["Unknown"].push(book);
       continue;
     }
-  const decade = Math.floor(book.year / 10) * 10;
-  const decadeKey = `${decade}s`;
- 
- if (!grouped[decadeKey]) {
-  grouped[decadeKey] = [];
+    const decade = Math.floor(book.year / 10) * 10;
+    const decadeKey = `${decade}s`;
+    if (!grouped[decadeKey]) {
+      grouped[decadeKey] = [];
+    }
+    grouped[decadeKey].push(book);
+  }
+return (grouped);
 }
 
-grouped[decadeKey].push(book); }
-}
+const byDecade = groupByDecade(catalog);
+console.log(byDecade);
