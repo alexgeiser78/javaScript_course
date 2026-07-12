@@ -88,7 +88,6 @@ function renderEntry(entry) {
   const author = entry.author || "Unknown";
   const year = entry.year || "Unknown";
   const location = entry.location || "Unknown";
-
   return `${"-".repeat(25)}
 Title: ${title}
 Author: ${author}
@@ -98,3 +97,13 @@ ${"-".repeat(25)}`;
 }
 
 console.log(renderEntry(catalog[0]));
+
+function validateEntry(entry) {
+  let isValid = true;
+
+  if (!entry.title || entry.title === "Unknown") {
+    isValid = false;
+  }
+
+  return isValid;
+}
