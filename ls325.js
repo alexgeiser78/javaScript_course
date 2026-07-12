@@ -100,22 +100,20 @@ console.log(renderEntry(catalog[0]));
 
 function validateEntry(entry) {
   let isValid = true;
-
-  if (!entry.title || entry.title === "Unknown") {
+  if (!("title" in entry) || !entry.title || entry.title === "Unknown") {
     isValid = false;
   }
-
-  if (!entry.author || entry.author === "Unknown") {
+  if (!("author" in entry) || !entry.author || entry.author === "Unknown") {
     isValid = false;
   }
-
-  if (!entry.year || entry.year === "Unknown") {
+  if (!("year" in entry) || !entry.year || entry.year === "Unknown") {
     isValid = false;
   }
-
-  if (!entry.location || entry.location === "Unknown") {
+  if (!("location" in entry) || !entry.location || entry.location === "Unknown") {
     isValid = false;
   }
-
   return isValid;
 }
+
+console.log(validateEntry(catalog[0]));
+console.log(validateEntry(catalog[16]));
