@@ -126,12 +126,34 @@ function exportToCSV(catalog) {
     const entry = catalog[i];
     rows.push(`"${entry.title}","${entry.author}",${entry.year},"${entry.location}"`);
   }
-let csv = header;
-for (let i = 0; i < rows.length; i++) {
-  csv = csv + "\n" + rows[i];
-}
-
-return csv;
+  let csv = header;
+  for (let i = 0; i < rows.length; i++) {
+    csv = csv + "\n" + rows[i];
+  }
+  return csv;
 }
 
 console.log(exportToCSV(catalog));
+
+console.log(catalog.length);
+console.log(Object.keys(byDecade).length);
+
+let oldestYear = Infinity;
+let newestYear = 0;
+
+for (let i = 0; i < catalog.length; i++) {
+  const entry = catalog[i];
+
+  if (entry.year !== "Unknown") {
+    if (entry.year < oldestYear) {
+      oldestYear = entry.year;
+    }
+
+    if (entry.year > newestYear) {
+      newestYear = entry.year;
+    }
+  }
+}
+
+console.log(oldestYear);
+console.log(newestYear);
