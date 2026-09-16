@@ -27,4 +27,8 @@ function processGateFlow(gate, tickIndex) {
     currentTickQueue--;
     processed++;
   }
+  return{
+    processed: processed,
+    overflow: currentTickQueue
+  }  
 }
