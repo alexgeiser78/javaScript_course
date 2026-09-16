@@ -21,5 +21,6 @@ function initializeThroughput(gates) {
 }
 
 function processGateFlow(gate, tickIndex) {
-  const currentTickQueue = gate.queue[tickIndex];
+  let currentTickQueue = gate.queue[tickIndex];
+  let processed = 0;
 }
