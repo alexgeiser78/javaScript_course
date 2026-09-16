@@ -27,8 +27,10 @@ function processGateFlow(gate, tickIndex) {
     currentTickQueue--;
     processed++;
   }
-  return{
+  return {
     processed: processed,
     overflow: currentTickQueue
-  }  
+  };
 }
+
+function rerouteOverflow(gates, currentGate, tickIndex, overflowAmount){}
