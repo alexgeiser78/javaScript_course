@@ -14,4 +14,10 @@ const nightGates = [
 
 function initializeThroughput(gates) {
   const summary = {};
+  
+  for (let i = 0; i < gates.length; i++) {
+    summary[gates[i].id] = 0;
+  }
+
+  return summary;
 }
