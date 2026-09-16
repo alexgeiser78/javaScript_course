@@ -20,4 +20,6 @@ function initializeThroughput(gates) {
   return summary;
 }
 
-function processGateFlow(gate, tickIndex){}
+function processGateFlow(gate, tickIndex) {
+  const currentTickQueue = gate.queue[tickIndex];
+}
