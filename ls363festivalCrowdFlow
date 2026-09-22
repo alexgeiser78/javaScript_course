@@ -59,4 +59,6 @@ function handleGateAtTick(gates, gate, tickIndex, throughputSummary) {
   }
 }
 
-function printSummary(summary){}
+function printSummary(summary) {
+  console.log("\nThroughput Summary");
+}
