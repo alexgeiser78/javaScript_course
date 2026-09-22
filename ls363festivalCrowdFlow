@@ -85,3 +85,4 @@ function simulateFestival(gates, timeBlock) {
 }
 
 simulateFestival(morningGates, "Morning");
+simulateFestival(nightGates, "Night");
