@@ -1,4 +1,4 @@
-const nextGateIndex = (currentIndex + 1) % gates.length;const morningGates = [
+const morningGates = [
   { id: "North", capacity: 5, queue: [3, 6, 2, 4] },
   { id: "East", capacity: 3, queue: [2, 4, 3, 5] },
   { id: "South", capacity: 4, queue: [1, 2, 3, 1] },
@@ -35,5 +35,6 @@ function processGateFlow(gate, tickIndex) {
 
 function rerouteOverflow(gates, currentGate, tickIndex, overflowAmount) {
   const currentIndex = gates.indexOf(currentGate);
-const nextGateIndex = (currentIndex + 1) % gates.length;
+  const nextGateIndex = (currentIndex + 1) % gates.length;
+  gates[nextGateIndex].queue[tickIndex] += overflowAmount;
 }
