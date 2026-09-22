@@ -72,4 +72,5 @@ function printSummary(summary) {
 function simulateFestival(gates, timeBlock) {
   console.log("\n" + timeBlock + " Simulation");
   const throughputSummary = initializeThroughput(gates);
+  const maxTicks = gates[0].queue.length;
 }
