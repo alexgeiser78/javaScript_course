@@ -3,8 +3,15 @@ const collection = {
     title: "Golden Mask",
     category: "Ceremonial",
     curator: {
-  id: 201,
-  name: "Earl Sinclair"
-}
+      id: 201,
+      name: "Earl Sinclair",
+    },
+    locations: [
+  { gallery: "Hall A", year: 2020 },
+  { gallery: "Hall C", year: 2024 }
+],
+  tags: ["gold", "egypt"],
+  onDisplay: true
+
   },
 };
