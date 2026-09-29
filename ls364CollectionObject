@@ -1,0 +1,6 @@
+const collection = {
+  101: {
+    title: "Golden Mask",
+    category: "Ceremonial"
+  }
+};
