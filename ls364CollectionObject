@@ -83,4 +83,6 @@ function buildSummary(id) {
   if (!artifact) {
     return "Artifact not found";
   }
+
+  const currentLocation = artifact.locations[artifact.locations.length - 1];
 }
