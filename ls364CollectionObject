@@ -33,3 +33,5 @@ function getArtifactTitle(id) {
   const artifact = collection[id];
   return artifact ? artifact.title : "Artifact not found";
 }
+
+console.log(getArtifactTitle(102));
