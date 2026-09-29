@@ -85,4 +85,10 @@ function buildSummary(id) {
   }
 
   const currentLocation = artifact.locations[artifact.locations.length - 1];
+
+  return `${artifact.title}
+Category: ${artifact.category}
+Curator: ${artifact.curator.name}
+Current Gallery: ${currentLocation.gallery}
+On Display: ${artifact.onDisplay}`;
 }
