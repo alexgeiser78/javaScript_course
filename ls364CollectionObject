@@ -64,6 +64,13 @@ function toggleDisplayStatus(id) {
 }
 
 console.log(collection[102].onDisplay);
-
 toggleDisplayStatus(102);
 console.log(collection[102].onDisplay);
+
+function updateCurator(id, name) {
+  const artifact = collection[id];
+
+  if (artifact) {
+    artifact.curator.name = name;
+  }
+}
