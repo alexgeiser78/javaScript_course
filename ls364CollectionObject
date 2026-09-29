@@ -79,16 +79,15 @@ console.log(collection[101].curator.name);
 
 function buildSummary(id) {
   const artifact = collection[id];
-
   if (!artifact) {
     return "Artifact not found";
   }
-
   const currentLocation = artifact.locations[artifact.locations.length - 1];
-
   return `${artifact.title}
 Category: ${artifact.category}
 Curator: ${artifact.curator.name}
 Current Gallery: ${currentLocation.gallery}
 On Display: ${artifact.onDisplay}`;
 }
+
+console.log(buildSummary(101));
