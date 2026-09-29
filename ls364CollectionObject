@@ -45,3 +45,11 @@ function addTag(id, tag) {
 
 addTag(101, "royal");
 console.log(collection[101].tags);
+
+function moveArtifact(id, gallery, year) {
+  const artifact = collection[id];
+
+  if (artifact) {
+    artifact.locations.push({ gallery, year });
+  }
+}
