@@ -35,3 +35,11 @@ function getArtifactTitle(id) {
 }
 
 console.log(getArtifactTitle(102));
+
+function addTag(id, tag) {
+  const artifact = collection[id];
+
+  if (artifact && !artifact.tags.includes(tag)) {
+    artifact.tags.push(tag);
+  }
+}
