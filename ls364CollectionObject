@@ -31,5 +31,5 @@ console.log(collection[101].curator.name);
 
 function getArtifactTitle(id) {
   const artifact = collection[id];
-  return artifact.title;
+  return artifact ? artifact.title : "Artifact not found";
 }
