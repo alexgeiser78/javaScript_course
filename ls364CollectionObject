@@ -38,8 +38,10 @@ console.log(getArtifactTitle(102));
 
 function addTag(id, tag) {
   const artifact = collection[id];
-
   if (artifact && !artifact.tags.includes(tag)) {
     artifact.tags.push(tag);
   }
 }
+
+addTag(101, "royal");
+console.log(collection[101].tags);
