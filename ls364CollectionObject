@@ -14,14 +14,17 @@ const collection = {
     onDisplay: true,
   },
   102: {
-  title: "Bronze Tablet",
-  category: "Inscription",
-  curator: {
-    id: 202,
-    name: "Robert Sinclair",
+    title: "Bronze Tablet",
+    category: "Inscription",
+    curator: {
+      id: 202,
+      name: "Robert Sinclair",
+    },
+    locations: [{ gallery: "Archive Wing", year: 2019 }],
+    tags: ["bronze", "writing"],
+    onDisplay: false,
   },
-  locations: [{ gallery: "Archive Wing", year: 2019 }],
-  tags: ["bronze", "writing"],
-  onDisplay: false,
-}
 };
+
+console.log(collection[101].title);
+console.log(collection[101].curator.name);
