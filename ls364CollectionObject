@@ -58,8 +58,12 @@ console.log(collection[102].locations);
 
 function toggleDisplayStatus(id) {
   const artifact = collection[id];
-
   if (artifact) {
     artifact.onDisplay = !artifact.onDisplay;
   }
 }
+
+console.log(collection[102].onDisplay);
+
+toggleDisplayStatus(102);
+console.log(collection[102].onDisplay);
